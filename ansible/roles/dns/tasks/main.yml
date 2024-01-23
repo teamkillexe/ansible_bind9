@@ -1,0 +1,33 @@
+- name: 
+  ansible.builtin.apt:
+    name: bind9
+    state: present
+    update_cache: false
+  notify: restart-bind
+
+- name: create needed dirs
+  ansible.builtin.file:
+    path: /etc/bind/{{ item }}
+    mode: "2755"
+    owner: "root"
+    group: "bind"
+    state: "directory"
+  with_items:
+    - forward_zone
+    - reverse_zone
+  notify: restart-bind
+
+- name: configure forward_zone 
+  ansible.builtin.template:
+    src: "{{ item.source }}"
+    dest: "{{ item.destination }}"
+    mode: "0644"
+    owner: "root"
+    group: "bind"
+  with_items:
+    - { source: "forward_zone_config.jg2", destination: "/etc/bind/forward_zone/dasplenum.com.zone" }
+    - { source: "reverse_zone_config.jg2", destination: "/etc/bind/reverse_zone/reversezone.rev" }
+    - { source: "named.conf.jg2", destination: "/etc/bind/named.conf" }
+  notify: restart-bind
+
+

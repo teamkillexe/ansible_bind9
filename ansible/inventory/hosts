@@ -1,0 +1,11 @@
+[all]
+# enter hostname with domain ansible_host="ipaddress"
+
+
+[test]
+
+[dns]
+# enter hostname with domain
+[k8s]
+
+

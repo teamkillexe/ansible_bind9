@@ -1,0 +1,13 @@
+FROM debian:latest
+
+RUN apt update -y && apt install -y curl python3-pip openssh-client scdaemon
+
+RUN pip3 install ansible --break-system-packages
+
+RUN useradd mgmt -m
+
+ENV ANSIBLE_CONFIG=/work/config/ansible.cfg
+
+RUN mkdir /work && chown mgmt:mgmt /work
+
+USER mgmt

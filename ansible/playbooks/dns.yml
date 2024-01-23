@@ -1,0 +1,6 @@
+---
+- name: exec dns
+  hosts: dns
+  remote_user: root
+  roles:
+    - dns

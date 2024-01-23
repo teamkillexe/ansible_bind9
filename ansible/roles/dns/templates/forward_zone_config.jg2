@@ -1,0 +1,19 @@
+$TTL 3600
+$ORIGIN {{ var_group_dns_domainname }}. ;
+
+@	IN	SOA	{{ inventory_hostname }}.	 {{ inventory_hostname }}. (
+			{{ var_group_dns_serialnumber }}	;
+			{{ var_group_dns_refreshtime }}		;
+			{{ var_group_dns_retry }}		;
+			{{ var_group_dns_expire }} 		;
+			{{ var_group_dns_nttl }}		;	
+			)
+
+{{ var_group_dns_nameservers }}
+
+
+; ---- Records below ----
+
+{{ var_group_dns_A_records }}
+
+{{ var_group_dns_CNAME_records }}

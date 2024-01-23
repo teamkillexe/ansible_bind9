@@ -1,0 +1,8 @@
+sudo docker run \
+        -v ./ansible:/work \
+        -v ~/.ssh/known_hosts:/home/mgmt/.ssh/known_hosts \
+        -e SSH_AUTH_SOCK=/run/host-services/ssh-auth.sock \
+        --rm \
+        -it \
+        ansible-work \
+        bash

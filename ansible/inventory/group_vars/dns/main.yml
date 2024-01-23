@@ -1,0 +1,17 @@
+---
+var_group_dns_domainname: # domainname
+var_group_dns_rev_name: # 112.168.192.in-addr.arpa example
+# serialnumber yyyymmddtt (t=tag)
+var_group_dns_serialnumber: 2024010605
+var_group_dns_refreshtime:  3600
+var_group_dns_retry: 600
+var_group_dns_expire: 21600
+var_group_dns_nttl: 600
+
+var_group_dns_nameservers: |
+  @  IN  NS  deb7.ebner.int.
+
+var_group_dns_A_records: |
+  deb7  IN  A 192.168.112.10
+var_group_dns_CNAME_records: |
+var_group_dns_rev_records: |

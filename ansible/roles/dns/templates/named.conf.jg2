@@ -1,0 +1,31 @@
+{{ var_group_all_managed_message }}
+
+
+acl internal { 
+	{{ var_group_dns_acl_internal }}
+};
+
+options { 
+	directory "/var/cache/bind";
+	
+	forwarders {
+		{{ var_group_dns_forwarders }}
+	};
+	
+	allow-query { internal;};
+	
+	dnssec-validation auto;
+	
+	listen-on-v6 { any; };
+};
+
+
+zone "{{ var_group_dns_domainname }}" IN {
+	type primary;
+	file "/etc/bind/forward_zone/{{ var_group_dns_domainname }}.zone";
+};
+
+zone "{{ var_group_dns_rev_name }}" IN {
+	type master;
+	file "/etc/bind/reverse_zone/reversezone.rev";
+};
