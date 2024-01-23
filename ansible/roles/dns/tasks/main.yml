@@ -25,7 +25,7 @@
     owner: "root"
     group: "bind"
   with_items:
-    - { source: "forward_zone_config.jg2", destination: "/etc/bind/forward_zone/dasplenum.com.zone" }
+    - { source: "forward_zone_config.jg2", destination: "/etc/bind/forward_zone/{{ var_group_dns_domainname }}.zone" }
     - { source: "reverse_zone_config.jg2", destination: "/etc/bind/reverse_zone/reversezone.rev" }
     - { source: "named.conf.jg2", destination: "/etc/bind/named.conf" }
   notify: restart-bind
