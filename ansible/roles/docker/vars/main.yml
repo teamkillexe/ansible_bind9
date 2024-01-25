@@ -1,0 +1,4 @@
+var_role_docker_repokey_keyring: "/etc/apt/keyrings/docker.gpg"
+var_role_docker_repokey_url: "https://download.docker.com/linux/debian/gpg"
+var_role_docker_repo_repostring: "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian bookworm stable"
+var_role_docker_repo_filename: "/etc/apt/sources.list.d/docker.list"
