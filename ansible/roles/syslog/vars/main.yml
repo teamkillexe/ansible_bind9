@@ -1,4 +1,4 @@
-var_role_syslog-ng_repokey_keyring: "/etc/apt/sources.list.d/syslog-ng-ose.list"
-var_role_syslog-ng_repokey_url: "https://ose-repo.syslog-ng.com/apt/syslog-ng-ose-pub.asc"
-var_role_syslog-ng_repo_repostring: "deb https://ose-repo.syslog-ng.com/apt/ stable debian-bookworm"
-var_role_syslog-ng_repo_filename: "/etc/apt/sources.list.d/syslog-ng-ose.list"
+var_role_syslogng_repokey_keyring: "/etc/apt/sources.list.d/syslog-ng-ose.list"
+var_role_syslogng_repokey_url: "https://ose-repo.syslog-ng.com/apt/syslog-ng-ose-pub.asc"
+var_role_syslogng_repo_repostring: "deb https://ose-repo.syslog-ng.com/apt/ stable debian-bookworm"
+var_role_syslogng_repo_filename: "/etc/apt/sources.list.d/syslog-ng-ose.list"

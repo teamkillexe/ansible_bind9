@@ -1,13 +1,13 @@
 - name: add syslog-ng keyring
   ansible.builtin.apt_key:
-    keyring: "{{ var_role_syslog-ng_repokey_keyring }}"
-    url: "{{ var_role_syslog-ng_repokey_url }}"
+    keyring: "{{ var_role_syslogng_repokey_keyring }}"
+    url: "{{ var_role_syslogng_repokey_url }}"
     state: "present"
 
 - name: add syslog-ng repo
   ansible.builtin.apt_repository:
-    repo: "{{ var_role_syslog-ng_repo_repostring }}"
-    filename: "{{ var_role_syslog-ng_repo_filename }}"
+    repo: "{{ var_role_syslogng_repo_repostring }}"
+    filename: "{{ var_role_syslogng_repo_filename }}"
     state: "present"
 
 - name: install syslog-ng
