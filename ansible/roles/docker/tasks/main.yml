@@ -1,3 +1,7 @@
+- name: install dependencies
+  ansible.builtin.apt:
+    name: gpg
+    state: "present"
 - name: add docker keyring
   ansible.builtin.apt_key:
     keyring: "{{ var_role_docker_repokey_keyring }}"
