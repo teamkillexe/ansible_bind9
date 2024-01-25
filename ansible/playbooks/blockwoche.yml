@@ -4,6 +4,7 @@
   roles:
     - docker
     - mail
+    - syslog
   
 - name: install bind and configure
   hosts: dns

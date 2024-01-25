@@ -16,6 +16,8 @@
 
 - name: install docker
   ansible.builtin.apt:
-    name: docker.io docker-compose-plugin
+    name: 
+      - docker.io 
+      - docker-compose-plugin
     update_cache: true
     state: "present"
