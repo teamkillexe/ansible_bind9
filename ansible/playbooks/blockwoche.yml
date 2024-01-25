@@ -3,16 +3,11 @@
   remote_user: root
   roles:
     - docker
-
+    - mail
+  
 - name: install bind and configure
   hosts: dns
   remote_user: root
   roles:
     - dns
 
-- name: install and configure mailcow
-  hosts: mail
-  remote_user: root
-  roles:
-    - docker
-    - mail

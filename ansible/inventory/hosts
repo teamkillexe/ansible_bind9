@@ -1,11 +1,6 @@
 [all]
-# enter hostname with domain ansible_host="ipaddress"
-
-
-[test]
-
+deb07.ebner.int ansible_host=192.168.112.10
 [dns]
-# enter hostname with domain
-[k8s]
+deb07.ebner.int
 
 
