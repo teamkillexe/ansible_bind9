@@ -1,7 +1,7 @@
 - name: create folder for docker-compose
   ansible.builtin.git:
     repo: "https://github.com/mailcow/mailcow-dockerized.git"
-    dest: "/opt/"
+    dest: "/opt/mailcow-dockerized"
 
 - name: docker pull images
   ansible.builtin.command:
